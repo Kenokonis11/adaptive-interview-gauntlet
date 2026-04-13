@@ -1,0 +1,37 @@
+target_company: "ACME Corp"
+role: "Data Scientist"
+mastery_alpha: 0.3
+
+core_requirements:
+  - "python_data_cleaning"
+  - "sql_window_functions"
+
+skill_proxies:
+  - original_skill: "python_data_cleaning"
+    proxy_type: "python_pandas"
+    proxy_context: >
+      ACME receives daily CSV extracts with missing values, duplicate rows, and
+      mixed numeric types. Ask the candidate to write Pandas logic that cleans
+      the data, normalizes numeric columns, and returns an analysis-ready table.
+    test_dataset: |
+      raw_data:
+        user_id: [1, 2, 2, 3]
+        revenue: ["100.5", null, "220", "75"]
+        clicks: [10, null, 10, 4]
+    difficulty_default: "standard"
+  - original_skill: "sql_window_functions"
+    proxy_type: "sql_duckdb"
+    proxy_context: >
+      ACME tracks sessions(user_id, session_date, minutes). Ask the candidate
+      for a SQL query that calculates a rolling 7 day average of listening
+      minutes per user while handling zero and null values correctly.
+    test_dataset: |
+      CREATE TABLE sessions (user_id INT, session_date DATE, minutes FLOAT);
+      INSERT INTO sessions VALUES
+        (1, '2024-01-01', 30.0),
+        (1, '2024-01-02', 0.0),
+        (1, '2024-01-03', NULL),
+        (2, '2024-01-01', 60.0);
+    difficulty_default: "standard"
+
+non_executable_skills: []

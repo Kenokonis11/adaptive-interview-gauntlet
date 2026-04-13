@@ -1,4 +1,9 @@
 # Core dependencies
 langgraph
-pydantic-ai
+pydantic-ai[google]
 mcp
+duckdb
+chromadb
+pyyaml
+pytest
+streamlit

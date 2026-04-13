@@ -1,1 +1,23 @@
-{}
+{
+  "candidate_name": "",
+  "last_updated": "",
+  "sessions_completed": 0,
+  "skills": {
+    "python_data_cleaning": {
+      "score": 0.0,
+      "attempts": 0,
+      "last_tested": null,
+      "history": [
+        0.0
+      ]
+    },
+    "sql_window_functions": {
+      "score": 0.0,
+      "attempts": 0,
+      "last_tested": null,
+      "history": [
+        0.0
+      ]
+    }
+  }
+}

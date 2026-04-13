@@ -72,3 +72,9 @@ Thumbs.db
 
 # Project-specific
 *.log
+data/sandbox_tmp/
+data/*.db
+data/chroma/
+data/chroma_db/
+.env.local
+*.env
