@@ -1,0 +1,4 @@
+# Core dependencies
+langgraph
+pydantic-ai
+mcp
